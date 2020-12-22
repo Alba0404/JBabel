@@ -1,6 +1,7 @@
 package fr.alba0404.jbabel;
 
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.util.Date;
@@ -29,9 +30,20 @@ public class JBabel {
 	private static PrintStream logFile;
 	
 	/**
+	 * Reader for the properties
+	 */
+	private static FileReader reader;
+	
+	/**
 	 * Properties of the language
 	 */
 	private static Properties properties;
+	
+	/**
+	 * Path of the folder with languages
+	 */
+	private final static String languageFolder = "ressources/languages";
+	
 	
 	
 	/**
@@ -79,12 +91,16 @@ public class JBabel {
 	private static void loadLangage() {
 		try {
 			// Loading the language file
-			properties.load(JBabel.class.getResourceAsStream("languages/" + language + ".properties"));
+			reader = new FileReader(languageFolder + language + ".properties");
+			properties.load(reader);
 			info("Language '" + language + "' succesfully load !", false);
 		}
 		catch (Exception e) {
 			// Loading the default language file if error when loading the language
-			try { properties.load(JBabel.class.getResourceAsStream("languages/" + defaultLanguage + ".properties")); }
+			try {
+				reader = new FileReader(languageFolder + defaultLanguage + ".properties");
+				properties.load(reader);
+			}
 			catch (IOException ex) {}
 			info("Failed to load '" + language + "' , loading default language '" + defaultLanguage + "' !", true);
 			e.printStackTrace(logFile);
@@ -113,6 +129,16 @@ public class JBabel {
 		logFile.println(message);
 		if(error) System.err.println(message);
 		else System.out.println(message);
+	}
+	
+	
+	/**
+	 * Getter for the languages folder.
+	 * 
+	 * @return The folder where are languages files.
+	 */
+	public static String getLanguageFolder() {
+		return languageFolder;
 	}
 
 }
