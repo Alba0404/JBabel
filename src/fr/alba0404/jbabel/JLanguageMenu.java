@@ -1,4 +1,4 @@
-package fr.alba0404.jbabel.gui;
+package fr.alba0404.jbabel;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -9,15 +9,13 @@ import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JRadioButtonMenuItem;
 
-import fr.alba0404.jbabel.JBabel;
-
 @SuppressWarnings("serial")
-public class LanguageJMenu extends JMenu implements ActionListener {
+public class JLanguageMenu extends JMenu implements ActionListener {
 	
 	
 	private JFrame parentFrame;
 	
-	public LanguageJMenu(JFrame parentFrame) {
+	public JLanguageMenu(JFrame parentFrame) {
 		super("Language");
 		this.parentFrame = parentFrame;
 		

@@ -1,9 +1,7 @@
-package fr.alba0404.jbabel.gui;
+package fr.alba0404.jbabel;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
-import fr.alba0404.jbabel.JBabel;
 
 public class LanguageJMenuListener implements ActionListener {
 

@@ -44,6 +44,11 @@ public class JBabel {
 	 */
 	private final static String languageFolder = "ressources/languages";
 	
+	/**
+	 * If the system is initialised.
+	 */
+	private static boolean isInit = false;
+	
 	
 	
 	/**
@@ -59,6 +64,7 @@ public class JBabel {
 		defaultLanguage = firstLanguage;
 		language = firstLanguage;
 		loadLangage();
+		isInit = true;
 	}
 	
 	
@@ -69,7 +75,9 @@ public class JBabel {
 	 * @return The String corresponding in the language file loaded.
 	 */
 	public static String getString(String key) {
-		return properties.getProperty(key);
+		String s = "";
+		if(isInit) s = properties.getProperty(key);
+		return s;
 	}
 	
 	
@@ -79,8 +87,10 @@ public class JBabel {
 	 * @param newLanguage The new language.
 	 */
 	public static void reload(String newLanguage) {
-		language = newLanguage;
-		loadLangage();
+		if(isInit) {
+			language = newLanguage;
+			loadLangage();
+		}
 	}
 	
 	
@@ -137,7 +147,7 @@ public class JBabel {
 	 * 
 	 * @return The folder where are languages files.
 	 */
-	public static String getLanguageFolder() {
+	static String getLanguageFolder() {
 		return languageFolder;
 	}
 
