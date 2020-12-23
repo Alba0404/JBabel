@@ -29,7 +29,8 @@ public class JLanguageMenu extends JMenu implements ActionListener {
 				System.out.println(fileName);									// Just for information to remove before production.
 				JRadioButtonMenuItem item = new JRadioButtonMenuItem(fileName);	// Create a new item with the language name.
 				item.addActionListener(this);									// Attach the listener to the item.
-				languageGroup.add(item);										// Add the button to the group so only 1 selected
+				languageGroup.add(item);										// Add the button to the group so only 1 selected.
+				if(fileName.equals(JBabel.language)) item.setSelected(true);	// Set the button selected if it's the language one.
 				this.add(item);
 				
 			}
@@ -41,7 +42,6 @@ public class JLanguageMenu extends JMenu implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		String source = e.getActionCommand();
 		JBabel.reload(source);
-		parentFrame.revalidate();
 		parentFrame.repaint();
 	}
 	

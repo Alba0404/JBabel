@@ -17,7 +17,7 @@ public class JBabel {
 	/**
 	 * Actual language
 	 */
-	private static String language;
+	static String language;
 	
 	/**
 	 * Name of the log file.
