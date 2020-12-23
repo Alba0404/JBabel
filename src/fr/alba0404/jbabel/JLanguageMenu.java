@@ -30,7 +30,6 @@ public class JLanguageMenu extends JMenu implements ActionListener {
 				JRadioButtonMenuItem item = new JRadioButtonMenuItem(fileName);	// Create a new item with the language name.
 				item.addActionListener(this);									// Attach the listener to the item.
 				languageGroup.add(item);										// Add the button to the group so only 1 selected
-				//item.addActionListener(new LanguageJMenuListener());			// Attach the listener to the item.
 				this.add(item);
 				
 			}

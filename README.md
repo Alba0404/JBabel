@@ -14,10 +14,24 @@ Sélectionner le projet => Properties => Java Build Path => Add External JARs... 
 Choisir le fichier .jar de JBabel => Ouvrir => Apply and Close
 
 ### Maven
-A faire
+```
+mvn install:install-file \
+   -Dfile=<path-to-file> \
+   -DgroupId=fr.alba0404 \
+   -DartifactId=jbabel \
+   -Dversion=<version> \
+   -Dpackaging=jar \
+   -DgeneratePom=true
+```
+You need to change **<path-to-file>** with the location of the .jar, and **<version>** with the version of JBabel. <br/>
+This code add the .jar file to your local repository, then use it on your project.
 
-### Graddle
-A faire
+### Gradle
+```
+dependencies {
+    compile files('path-to-jar-file')
+}
+```
 
 
 
@@ -39,7 +53,7 @@ bar.add(new JLanguageMenu(parentJFrame);
 
 ## Licence / License
 Le terme *programme* représente le fichier .jar ainsi que ses sources, fichiers binaires et ressources rattachées. <br/>
-Ce programme reste la propriété intellectuelle du développeur : [Alba0404](mailto:alba0404@orange.fr). <br/>
-Il est autorisé de télécharger et exécuter ce programme à des fins privées ou commerciales du moment que celles-ci sont légales. <br/>
-Il est interdit de vendre ce programme sous une quelconque forme, modifié ou non. <br/>
-Si le programme est utilisé dans un projet, la citation du développeur est obligatoire. Ce projet doit respecter les conditions précédentes.
+- Ce programme reste la propriété intellectuelle du développeur : [Alba0404](mailto:alba0404@orange.fr).
+- Il est autorisé de télécharger et exécuter ce programme à des fins privées ou commerciales du moment que celles-ci sont légales.
+- Il est interdit de vendre ce programme sous une quelconque forme, modifié ou non.
+- Si le programme est utilisé dans un projet, la citation du développeur est obligatoire. Ce projet doit respecter les conditions précédentes.
