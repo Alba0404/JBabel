@@ -42,7 +42,7 @@ public class JBabel {
 	/**
 	 * Path of the folder with languages
 	 */
-	private final static String languageFolder = "ressources/languages";
+	private final static String languageFolder = "ressources/languages/";
 	
 	/**
 	 * If the system is initialised.
@@ -84,10 +84,10 @@ public class JBabel {
 	/**
 	 * Reload the API with a new language.
 	 * 
-	 * @param newLanguage The new language.
+	 * @param newLanguage The new language to load.
 	 */
 	public static void reload(String newLanguage) {
-		if(isInit) {
+		if(isInit && language != newLanguage) {
 			language = newLanguage;
 			loadLangage();
 		}
