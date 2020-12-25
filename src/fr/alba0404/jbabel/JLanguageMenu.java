@@ -12,7 +12,6 @@ import javax.swing.JRadioButtonMenuItem;
 @SuppressWarnings("serial")
 public class JLanguageMenu extends JMenu implements ActionListener {
 	
-	
 	private JFrame parentFrame;
 	
 	public JLanguageMenu(JFrame parentFrame) {
@@ -26,7 +25,6 @@ public class JLanguageMenu extends JMenu implements ActionListener {
 			if(fileName.endsWith(".properties")) {								// Only properties file are interesting.
 				
 				fileName = fileName.substring(0, fileName.length()-11);			// Remove .properties suffix.
-				System.out.println(fileName);									// Just for information to remove before production.
 				JRadioButtonMenuItem item = new JRadioButtonMenuItem(fileName);	// Create a new item with the language name.
 				item.addActionListener(this);									// Attach the listener to the item.
 				languageGroup.add(item);										// Add the button to the group so only 1 selected.
@@ -37,14 +35,15 @@ public class JLanguageMenu extends JMenu implements ActionListener {
 		}
 		
 	}
-
+	
+	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		String source = e.getActionCommand();
 		JBabel.reload(source);
+		// Reload parentFrame here
+		//parentFrame.getContentPane().removeAll();
 		parentFrame.repaint();
 	}
-	
-	
 
 }

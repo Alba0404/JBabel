@@ -107,13 +107,17 @@ public class JBabel {
 		}
 		catch (Exception e) {
 			// Loading the default language file if error when loading the language
+			info("Failed to load '" + language + "' , loading default language '" + defaultLanguage + "' !", true);
+			e.printStackTrace(logFile);
 			try {
 				reader = new FileReader(languageFolder + defaultLanguage + ".properties");
 				properties.load(reader);
 			}
-			catch (IOException ex) {}
-			info("Failed to load '" + language + "' , loading default language '" + defaultLanguage + "' !", true);
-			e.printStackTrace(logFile);
+			catch (IOException ex) {
+				info("Failed to load default language '" + defaultLanguage + "' !", true);
+				ex.printStackTrace(logFile);
+			}
+		// End global try catch	
 		}
 		
 	}

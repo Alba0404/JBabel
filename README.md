@@ -7,11 +7,14 @@ Simple et efficace ce système incorpore également un JMenu custom ajoutable à vo
 
 
 ## Install
-La bibliothèque JBabel se présente sous la forme d'un fichier .jar non exécutable.
+La bibliothèque JBabel se présente sous la forme d'un fichier .jar non exécutable. Vous pouvez le télécharger dans la partie release de Github. <br/>
+JBabel Library is in a no-exe .jar file. You can download it in the release part of Github.
 
 ### Eclipse
-Sélectionner le projet => Properties => Java Build Path => Add External JARs... <br/>
-Choisir le fichier .jar de JBabel => Ouvrir => Apply and Close
+Sélectionner le projet => *Properties* => *Java Build Path* => *Add External JARs...* =>
+Choisir le fichier .jar de JBabel => *Ouvrir* => *Apply and Close* <br/>
+Select your project => *Properties* => *Java Build Path* => Add External JARs...* =>
+Choose JBabel jar file => *Open* => *Apply and Close* <br/>
 
 ### Maven
 ```
@@ -23,7 +26,9 @@ mvn install:install-file \
    -Dpackaging=jar \
    -DgeneratePom=true
 ```
-You need to change **<path-to-file>** with the location of the .jar, and **<version>** with the version of JBabel. <br/>
+Changez **<path-to-file>** par le chemin vers le .jar, et **<version>** par la version de JBabel.
+Ce code ajoute le .jar à votre repository local, récupérer la bibliothèque par ce biais. <br/>
+Change **<path-to-file>** with the location of the .jar, and **<version>** with the version of JBabel.
 This code add the .jar file to your local repository, then use it on your project.
 
 ### Gradle
@@ -40,18 +45,21 @@ dependencies {
 import fr.alba0404.jbabel.JBabel;
 import fr.alba0404.jbabel.JLanguageMenu
 
+//Core
 JBabel.init("defaultLanguage");		// Init the system with the default language
-String s = JBabel.getString("key");	// Return the String corresponding to the key in the selected file
+String s = JBabel.getString("key");	// Return the String corresponding to the key in the selected language file
 JBabel.reload("newLanguage");		// Reload the system with an other language. Default language is used if error loading the new one.
 
-//Use of JLanguageMenu
-JMenuBar bar = new JMenuBar();
-bar.add(new JLanguageMenu(parentJFrame);
+//Graphic part (need init)
+JFrame frame = new JFrame();		// Create a JFrame
+JMenuBar bar = new JMenuBar();		// Create a JMenuBar
+bar.add(new JLanguageMenu(frame));	// Add the JMenu used to choose the language to the JMenuBar.
+frame.setJMenuBar(bar);			// Attach the JMenuBar to the JFrame
 ```
 
 
 
-## Licence / License
+## License
 Le terme *programme* représente le fichier .jar ainsi que ses sources, fichiers binaires et ressources rattachées. <br/>
 - Ce programme reste la propriété intellectuelle du développeur : [Alba0404](mailto:alba0404@orange.fr).
 - Il est autorisé de télécharger et exécuter ce programme à des fins privées ou commerciales du moment que celles-ci sont légales.
