@@ -8,7 +8,10 @@ Simple et efficace ce système incorpore également un JMenu custom ajoutable à vo
 
 ## Install
 La bibliothèque JBabel se présente sous la forme d'un fichier .jar non exécutable. Vous pouvez le télécharger dans la partie release de Github. <br/>
-JBabel Library is in a no-exe .jar file. You can download it in the release part of Github.
+JBabel Library is in a no-exe .jar file. You can download it in the release part of Github. <br/>
+<br/>
+Pour utiliser JBabel dans un projet, il est nécessaire de créer à la racine de celui-ci (même niveau que src) un dossier *ressources*. Dans ce dossier créer un dossier languages. C'est dans ce dossier que vous doivent se trouver les fichiers *.properties* . <br/>
+To use JBabel, you need to create a new folder *ressources* in the same folder as *src*. In this folder add a folder *languages*. Languages files ending with *.properties* have to be there.
 
 ### Eclipse
 Sélectionner le projet => *Properties* => *Java Build Path* => *Add External JARs...* =>
@@ -50,6 +53,7 @@ JBabel.init("defaultLanguage");		// Init the system with the default language
 String s = JBabel.getString("key");	// Return the String corresponding to the key in the selected language file
 JBabel.reload("newLanguage");		// Reload the system with an other language. Default language is used if error loading the new one.
 
+@since 1.1
 //Graphic part (need init)
 JFrame frame = new JFrame();		// Create a JFrame
 JMenuBar bar = new JMenuBar();		// Create a JMenuBar
