@@ -1,11 +1,13 @@
 package fr.alba0404.jbabel;
 
+import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 
 import javax.swing.ButtonGroup;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JRadioButtonMenuItem;
 
@@ -41,9 +43,7 @@ public class JLanguageMenu extends JMenu implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		String source = e.getActionCommand();
 		JBabel.reload(source);
-		// Reload parentFrame here
-		//parentFrame.getContentPane().removeAll();
-		parentFrame.repaint();
+		//Reload parentFrame
 	}
 
 }
