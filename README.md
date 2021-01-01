@@ -64,8 +64,8 @@ frame.setJMenuBar(bar);			// Attach the JMenuBar to the JFrame
 
 
 ## License
-Le terme *programme* représente le fichier .jar ainsi que ses sources, fichiers binaires et ressources rattachées. <br/>
-- Ce programme reste la propriété intellectuelle du développeur : [Alba0404](mailto:alba0404@orange.fr).
+Le terme *programme* représente le fichier .jar ainsi que ses sources, fichiers binaires et ressources attachées. <br/>
+- Ce programme est la propriété intellectuelle du développeur : [Alba0404](mailto:alba0404@orange.fr).
 - Il est autorisé de télécharger et exécuter ce programme à des fins privées ou commerciales du moment que celles-ci sont légales.
 - Il est interdit de vendre ce programme sous une quelconque forme, modifié ou non.
-- Si le programme est utilisé dans un projet, la citation du développeur est obligatoire. Ce projet doit respecter les conditions précédentes.
+- **Si le programme est utilisé dans un projet, quelque soit la forme de celui-ci, la citation du développeur est obligatoire**. De plus ce projet doit respecter les lois en vigueurs.
