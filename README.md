@@ -61,8 +61,6 @@ bar.add(new JLanguageMenu(frame));	// Add the JMenu used to choose the language 
 frame.setJMenuBar(bar);			// Attach the JMenuBar to the JFrame
 ```
 
-### Fr.properties :
-
 ```
 #===============#
 # Fr.properties #
