@@ -66,7 +66,6 @@ frame.setJMenuBar(bar);			// Attach the JMenuBar to the JFrame
 # Fr.properties #
 #===============#
 
-# Ceci est un commentaire / This is a comment
 message.welcome = Bienvenue sur mon Programme !
 
 ```
