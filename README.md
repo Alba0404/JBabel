@@ -31,7 +31,7 @@ mvn install:install-file \
 ```
 Changez **\<path-to-file>** par le chemin vers le .jar, et **\<version>** par la version de JBabel.
 Ce code ajoute le .jar à votre repository local, récupérer la bibliothèque par ce biais. <br/>
-Change **<path-to-file>** with the location of the .jar, and **<version>** with the version of JBabel.
+Change **\<path-to-file>** with the location of the .jar, and **\<version>** with the version of JBabel.
 This code add the .jar file to your local repository, then use it on your project.
 
 ### Gradle
