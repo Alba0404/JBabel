@@ -1,4 +1,4 @@
-# JBabel-API
+# JBabel
 JBabel est une bibliothèque Java permettant d'ajouter rapidement et facilement un système
 multi-langue à un programme. Les différentes langues sont stockées dans des fichiers .properties
 situés dans le projet java. Pour ajouter une langue : ajouter un fichier, modifier : modifier le fichier. <br/>
