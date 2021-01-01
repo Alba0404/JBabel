@@ -16,7 +16,7 @@ To use JBabel, you need to create a new folder *ressources* in the same folder a
 ### Eclipse
 Sélectionner le projet => *Properties* => *Java Build Path* => *Add External JARs...* =>
 Choisir le fichier .jar de JBabel => *Ouvrir* => *Apply and Close* <br/>
-Select your project => *Properties* => *Java Build Path* => Add External JARs...* =>
+Select your project => *Properties* => *Java Build Path* => *Add External JARs...* =>
 Choose JBabel jar file => *Open* => *Apply and Close* <br/>
 
 ### Maven
@@ -29,7 +29,7 @@ mvn install:install-file \
    -Dpackaging=jar \
    -DgeneratePom=true
 ```
-Changez **<path-to-file>** par le chemin vers le .jar, et **<version>** par la version de JBabel.
+Changez **\<path-to-file>** par le chemin vers le .jar, et **\<version>** par la version de JBabel.
 Ce code ajoute le .jar à votre repository local, récupérer la bibliothèque par ce biais. <br/>
 Change **<path-to-file>** with the location of the .jar, and **<version>** with the version of JBabel.
 This code add the .jar file to your local repository, then use it on your project.
