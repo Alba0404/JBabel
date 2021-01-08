@@ -151,7 +151,7 @@ public class JBabel {
 	 * 
 	 * @return The folder where are languages files.
 	 */
-	static String getLanguageFolder() {
+	public static String getLanguageFolder() {
 		return languageFolder;
 	}
 
