@@ -50,8 +50,9 @@ import fr.alba0404.jbabel.JLanguageMenu
 
 //Core
 JBabel.init("Fr.properties");			// Init the system with the default language. The String is the name of the .properties file.
-String s = JBabel.getString("message.welcome");	// Return "Bienvenue sur mon Programme !"
-JBabel.reload("newLanguage");			// Reload the system with an other language. Default language is used if error loading the new one. The String is the name of the .properties file.
+String s = JBabel.getString("message.welcome");	// s = "Bienvenue sur mon Programme !"
+JBabel.reload("En");				// Reload with English. French is used if error loading 'En.properties'.
+s = JBabel.getString("message.welcome");	// s = "Hello world !"
 
 @since 1.1
 //Graphic part (need init)
@@ -69,6 +70,16 @@ frame.setJMenuBar(bar);			// Attach the JMenuBar to the JFrame
 message.welcome = Bienvenue sur mon Programme !
 
 ```
+
+```
+#===============#
+# En.properties #
+#===============#
+
+message.welcome = Hello world !
+
+```
+
 
 
 ## License
